@@ -1,0 +1,4 @@
+---
+hadoop_user: hadoop
+hadoop_group: hadoopteam
+hadoop_download_url: http://apache.cs.utah.edu/hadoop/common/hadoop-2.7.6/hadoop-2.7.6.tar.gz

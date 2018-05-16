@@ -1,0 +1,30 @@
+---
+- name: Install hadoop master node
+  hosts: hadoop-master
+  remote_user: hadoop
+  sudo: yes
+
+  roles:
+   #- pip
+   #- common
+   #- spark
+   #- oraclejava8
+   #- master
+   #- opencv
+   #- postgresql
+ 
+    
+- name: Install hadoop data nodes
+  hosts: hadoop-data
+  remote_user: hadoop
+  sudo: yes
+
+  roles:
+   - scipy
+   #- common
+   #- spark
+   #- oraclejava8
+   #- opencv
+   
+#    - data
+

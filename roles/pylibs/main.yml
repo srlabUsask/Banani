@@ -1,0 +1,23 @@
+  
+- name: Install apt packages 
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+  - checkinstall
+  - python-skimage
+  - python-paramiko
+  - python-scipy
+ become: yes
+ 
+- name: Ensure Pip is installed.
+  package:
+    name: "{{ pip_package }}"
+    state: present
+
+- name: Install python packages with pip
+  pip: name={{ item }} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+  - re
+  - errno
+  - functools
+  - skimage
+ become: yes

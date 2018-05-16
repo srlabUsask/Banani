@@ -1,0 +1,26 @@
+---
+
+galaxy_info:
+  author: EDITD devs
+  description: A role for downloading and building OpenCV
+  company: EDITD
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  - name: Debian
+    versions:
+    - all
+    - jessie
+    - lucid
+    - maverick
+    - natty
+    - oneiric
+    - precise
+    - quantal
+    - raring
+    - saucy
+    - trusty
+  categories:
+  - development
+  - system
+dependencies: []
