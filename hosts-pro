@@ -1,0 +1,20 @@
+[hadoop-master]
+
+
+206.12.102.75             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname==hadoopmaster  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+
+[hadoop-data]
+206.12.102.78             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname=hadoop-data-0  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+206.12.102.73             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname=hadoop-data-1  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+206.12.102.76             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname=hadoop-data-2  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+206.12.102.77             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname=hadoop-data-3  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+206.12.102.74             ansible_connection=ssh  ansible_ssh_user=hadoop api_hostname=hadoop-data-4  ansible_ssh_private_key_file=~/.ssh/hdpspark.pem
+
+[hadoop-master:vars]
+nodesfile=nodes-pro
+
+[hadoop-data:vars]
+nodesfile=nodes-pro
+
+[all:vars]
+hadoopmaster=206.12.102.75
